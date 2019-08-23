@@ -1,0 +1,14 @@
+C:\Users\MrGray\Desktop\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\bin\Debug\ClassOfTeachersProgram.exe.config
+C:\Users\MrGray\Desktop\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\bin\Debug\ClassOfTeachersProgram.exe
+C:\Users\MrGray\Desktop\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\bin\Debug\ClassOfTeachersProgram.pdb
+C:\Users\MrGray\Desktop\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.csprojAssemblyReference.cache
+C:\Users\MrGray\Desktop\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.csproj.CoreCompileInputs.cache
+C:\Users\MrGray\Desktop\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.exe
+C:\Users\MrGray\Desktop\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.pdb
+C:\Users\MrGray\Desktop\Files\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\bin\Debug\ClassOfTeachersProgram.exe.config
+C:\Users\MrGray\Desktop\Files\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\bin\Debug\ClassOfTeachersProgram.exe
+C:\Users\MrGray\Desktop\Files\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\bin\Debug\ClassOfTeachersProgram.pdb
+C:\Users\MrGray\Desktop\Files\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.csprojAssemblyReference.cache
+C:\Users\MrGray\Desktop\Files\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.csproj.CoreCompileInputs.cache
+C:\Users\MrGray\Desktop\Files\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.exe
+C:\Users\MrGray\Desktop\Files\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.pdb
