@@ -76,7 +76,7 @@ namespace ClassOfTeachersProgram
         public static ClassInfo classInfo = new ClassInfo();
         public static Teacher teacher = new Teacher();
 
-        // HACK
+        // HACK Hard Coded For Students
 
         /// <summary>
         /// StudentsClassInfo Program Instance
@@ -146,7 +146,7 @@ namespace ClassOfTeachersProgram
                         Console.WriteLine("Description: " + cls.Description);
                         return;
                     case 3:
-                        AddClassInfo();
+                        Console.WriteLine(AddClassInfo());
                         return;
                     case 4:
                         Console.WriteLine("Enter Class ID: ");
@@ -154,8 +154,24 @@ namespace ClassOfTeachersProgram
                         RemoveClassInfoByID(class_id);
                         return;
                     case 5:
-                        //int.TryParse(Console.ReadLine(), out class_id);
-                        //EditClassInfo(class_id);
+                        int.TryParse(Console.ReadLine(), out class_id);
+
+                        Console.WriteLine("enter new class name: ");
+                        string cName = Console.ReadLine();
+                        Console.WriteLine("enter new Start Date: ");
+                        var cStart = DateTimeOffset.Parse(Console.ReadLine());
+                        Console.WriteLine("enter new End Date: ");
+                        var cEnd = DateTimeOffset.Parse(Console.ReadLine());
+                        Console.WriteLine("enter new Class Description: ");
+                        var cDesc = Console.ReadLine();
+                        classInfo = new ClassInfo
+                        {
+                            Name = cName,
+                            StartDateTimeOffset = cStart,
+                            EndDateTimeOffset = cEnd,
+                            Description = cDesc
+                        };
+                        EditClassInfo(classInfo, class_id);
                         return;
                     case 6:
                         Console.WriteLine("enter student id: ");
@@ -261,7 +277,7 @@ namespace ClassOfTeachersProgram
 
         }
         /// <summary>
-        /// Show Teachers Menu
+        /// Show Teachers Menu Items
         /// </summary>
         public static void DisplayTeachersMenu()
         {
@@ -318,7 +334,7 @@ namespace ClassOfTeachersProgram
         }
         #endregion
 
-        #region Extra Methods
+        #region Extra Methods - متدهای کمکی
 
         /// <summary>
         /// For Seprate Items In Console
@@ -368,10 +384,12 @@ namespace ClassOfTeachersProgram
 
         #endregion
 
-        #region CRUD Functions
+        #region CRUD Functions - توابع اصلی
 
         //TODO
-        //! متد ها باید به بخش یا لایه منطقی برنامه منقل و اصلاح شوند
+        //! متد ها باید به لایه منطقی برنامه منقل واصلاح شوند
+
+        //---------- Students Info
 
         /// <summary>
         /// Add New Student 
@@ -435,6 +453,10 @@ namespace ClassOfTeachersProgram
 
 
         // -------------Classes Info
+
+        /// <summary>
+        /// Get and Show All Classes Info
+        /// </summary>
         public static void ShowClassesInfoList()
         {
             if (StudentsClassInfo == null)
@@ -456,10 +478,38 @@ namespace ClassOfTeachersProgram
 
         }
 
-        public static ClassInfo GetClassInfoById(int id)
+        /// <summary>
+        /// Get a class info by ID
+        /// </summary>
+        /// <param name="id">classId</param>
+        /// <returns></returns>
+        public static ClassInfo GetClassInfoById(int classId)
         {
-            var st = StudentsClassInfo.ClassesInfo.SingleOrDefault(x => x.ID == id);
+            ClassInfo st = StudentsClassInfo.ClassesInfo.SingleOrDefault(x => x.ID == classId);
             return st;
+        }
+
+        /// <summary>
+        /// edit class info by ud
+        /// </summary>
+        /// <param name="classInfo">new classInfo Entity</param>
+        /// <param name="class_id">id of class</param>
+        public static void EditClassInfo(ClassInfo classInfo, int class_id)
+        {
+            try
+            {
+                var classToEdit = StudentsClassInfo.ClassesInfo.FirstOrDefault(c => c.ID == class_id);
+
+                classToEdit.Name = classInfo.Name;
+                classToEdit.StartDateTimeOffset = classInfo.StartDateTimeOffset;
+                classToEdit.EndDateTimeOffset = classInfo.EndDateTimeOffset;
+                classToEdit.Description = classInfo.Description;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
         public static string AddClassInfo()
         {

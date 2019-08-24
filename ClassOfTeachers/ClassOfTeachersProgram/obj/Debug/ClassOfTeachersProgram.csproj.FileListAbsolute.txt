@@ -12,3 +12,10 @@ C:\Users\MrGray\Desktop\Files\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeach
 C:\Users\MrGray\Desktop\Files\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.csproj.CoreCompileInputs.cache
 C:\Users\MrGray\Desktop\Files\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.exe
 C:\Users\MrGray\Desktop\Files\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.pdb
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProgram\bin\Debug\ClassOfTeachersProgram.exe.config
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProgram\bin\Debug\ClassOfTeachersProgram.exe
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProgram\bin\Debug\ClassOfTeachersProgram.pdb
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.csprojAssemblyReference.cache
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.csproj.CoreCompileInputs.cache
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.exe
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.pdb
