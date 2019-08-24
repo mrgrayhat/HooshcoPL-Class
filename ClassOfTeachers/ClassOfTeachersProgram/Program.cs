@@ -154,8 +154,8 @@ namespace ClassOfTeachersProgram
                         RemoveClassInfoByID(class_id);
                         return;
                     case 5:
-                        int.TryParse(Console.ReadLine(), out class_id);
-                        EditClassInfo(class_id);
+                        //int.TryParse(Console.ReadLine(), out class_id);
+                        //EditClassInfo(class_id);
                         return;
                     case 6:
                         Console.WriteLine("enter student id: ");
