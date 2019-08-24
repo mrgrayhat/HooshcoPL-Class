@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="C:\Users\MrGray\Desktop\Files\TeacherOfClass\ClassOfTeachersProgram\ClassOfTeachersProgram\Program.cs" company="">
-//     Author:  
+// <copyright file="S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProgram\Program.cs" company="">
+//     Author:  saeed rezayi
 //     Copyright (c) . All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
@@ -103,7 +103,7 @@ namespace ClassOfTeachersProgram
             int userInputNumber = 0;
 
             List<string> ManageClassInfoMenu = new List<string>();
-            ManageClassInfoMenu.Add("    1: Display All Class");
+            ManageClassInfoMenu.Add("    1: Display All Classes Info");
             ManageClassInfoMenu.Add("    2: Display ClassInfo By ID");
             ManageClassInfoMenu.Add("    3: Add Class");
             ManageClassInfoMenu.Add("    4: Delete Class");
@@ -125,20 +125,45 @@ namespace ClassOfTeachersProgram
 
                 // get user selected item
                 int.TryParse(Console.ReadKey(true).KeyChar.ToString(), out userInputNumber);
+                int class_id = 0;
 
                 switch (userInputNumber)
                 {
                     case 1:
+                        ShowClassesInfoList();
                         return;
                     case 2:
+                        Console.WriteLine("Enter Class ID: ");
+                        int.TryParse(Console.ReadLine(), out class_id);
+                        var cls = GetClassInfoById(class_id);
+                        Console.WriteLine("====================================");
+                        Console.WriteLine("GUID: " + cls.ClassInfoGUID);
+                        Console.WriteLine("ID: " + cls.ID);
+                        Console.WriteLine("Name: " + cls.Name);
+                        Console.WriteLine("Created at: " + cls.CreatedDateTimeOffset);
+                        Console.WriteLine("Start Date: " + cls.StartDateTimeOffset);
+                        Console.WriteLine("End Date: " + cls.EndDateTimeOffset);
+                        Console.WriteLine("Description: " + cls.Description);
                         return;
                     case 3:
+                        AddClassInfo();
                         return;
                     case 4:
+                        Console.WriteLine("Enter Class ID: ");
+                        int.TryParse(Console.ReadLine(), out class_id);
+                        RemoveClassInfoByID(class_id);
                         return;
                     case 5:
+                        int.TryParse(Console.ReadLine(), out class_id);
+                        EditClassInfo(class_id);
                         return;
                     case 6:
+                        Console.WriteLine("enter student id: ");
+                        int sId = int.Parse(Console.ReadLine());
+                        Console.WriteLine("enter class id: ");
+                        int cId = int.Parse(Console.ReadLine());
+                        StudentsClassInfo.StudentID = sId;
+                        StudentsClassInfo.ClassInfoID = cId;
                         return;
                     default:
                         Console.WriteLine("Error! Enter Operaion...");
@@ -164,6 +189,7 @@ namespace ClassOfTeachersProgram
             ManageStudentsMenu.Add("    3: Add Student");
             ManageStudentsMenu.Add("    4: Delete Student");
             ManageStudentsMenu.Add("    5: Edit Student");
+            ManageStudentsMenu.Add("    6: Register");
 
             try
             {
@@ -180,20 +206,48 @@ namespace ClassOfTeachersProgram
 
                 // get user selected item
                 int.TryParse(Console.ReadKey(true).KeyChar.ToString(), out userInputNumber);
+                int student_Id = 0; ;
 
                 switch (userInputNumber)
                 {
                     case 1:
+                        ShowStudentsList();
                         return;
                     case 2:
+                        Console.WriteLine("Enter student ID: ");
+                        int.TryParse(Console.ReadLine(), out student_Id);
+                        var st = GetStudentById(student_Id);
+                        Console.WriteLine("====================================");
+                        Console.WriteLine("GUID: " + st.StudentGUID);
+                        Console.WriteLine("ID: " + st.ID);
+                        Console.WriteLine("Name: " + st.FirstName);
+                        Console.WriteLine("LastName: " + st.LastName);
+                        Console.WriteLine("Date: " + st.CreateDateTimeOffset);
                         return;
                     case 3:
+                        //
+                        Console.WriteLine(AddNewStudent());
                         return;
                     case 4:
+                        Console.WriteLine("enter student number: ");
+                        int.TryParse(Console.ReadLine(), out student_Id);
+                        if (StudentsClassInfo.Students == null || StudentsClassInfo.Students.Count == 0)
+                        {
+                            Console.WriteLine("Error! No any student found!");
+                            return;
+                        }
+                        Student remSt = StudentsClassInfo.Students
+                            .Where(x => x.ID == student_Id).FirstOrDefault();
+                        if (StudentsClassInfo.Students.Remove(remSt))
+                            Console.WriteLine($"student ID {remSt.ID}, Name {remSt.FirstName} removed Successfully");
+                        else { Console.WriteLine("not found!"); }
                         return;
                     case 5:
+                        int.TryParse(Console.ReadLine(), out student_Id);
+                        //EditStudentByID(student_id);
                         return;
                     case 6:
+                        //register
                         return;
                     default:
                         Console.WriteLine("Error! Enter Operaion...");
@@ -278,9 +332,12 @@ namespace ClassOfTeachersProgram
         /// Generate a Random Integer
         /// </summary>
         /// <returns></returns>
-        public static int GenerateRandomID()
+        public static int GenerateRandomID(int max = 1000, int min = 1)
         {
-            return new Random().Next(1, 1000);
+            if (min < 0 & max <= 0) return 0;
+            int next = new Random().Next(minValue: min, maxValue: max);
+            // else:
+            return next;
         }
         private static void ResetConsoleColor()
         {
@@ -311,6 +368,149 @@ namespace ClassOfTeachersProgram
 
         #endregion
 
+        #region CRUD Functions
+
+        //TODO
+        //! متد ها باید به بخش یا لایه منطقی برنامه منقل و اصلاح شوند
+
+        /// <summary>
+        /// Add New Student 
+        /// </summary>
+        /// <param name="student">student</param>
+        /// <returns></returns>
+        public static string AddNewStudent(Student student = null)
+        {
+            Console.WriteLine("please enter student detail: ");
+            Console.WriteLine("please enter Name: ");
+            string Fname = Console.ReadLine();
+            Console.WriteLine("please enter Last Name: ");
+            string lName = Console.ReadLine();
+            Console.WriteLine("please enter desc: ");
+            string desc = Console.ReadLine();
+            student = new Student
+            {
+                FirstName = Fname,
+                LastName = lName,
+                Description = desc
+            };
+            StudentsClassInfo.Students.Add(student);
+            return $"ID: {student.ID} Full Name: {string.Concat(student.FirstName, student.LastName)}";
+        }
+        /// <summary>
+        /// Get a student by student id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static Student GetStudentById(int id)
+        {
+            var st = StudentsClassInfo.Students.SingleOrDefault(x => x.ID == id);
+            return st;
+        }
+
+        /// <summary>
+        /// Get All Students List From Students Entity - Collection
+        /// </summary>
+        /// <returns></returns>
+        public static List<Student> GetAllStudents()
+        {
+            var all = StudentsClassInfo.Students;
+            return all.ToList();
+        }
+
+        /// <summary>
+        /// Display All Students From Students List
+        /// </summary>
+        public static void ShowStudentsList()
+        {
+            foreach (var item in GetAllStudents())
+            {
+                Console.WriteLine("====================================");
+                Console.WriteLine("GUID: " + item.StudentGUID);
+                Console.WriteLine("ID: " + item.ID);
+                Console.WriteLine("Name: " + item.FirstName);
+                Console.WriteLine("LastName: " + item.LastName);
+                Console.WriteLine("Date: " + item.CreateDateTimeOffset);
+            }
+        }
+
+
+        // -------------Classes Info
+        public static void ShowClassesInfoList()
+        {
+            if (StudentsClassInfo == null)
+            {
+                Console.WriteLine("No Data.");
+                return;
+            }
+            foreach (var item in StudentsClassInfo.ClassesInfo.ToList())
+            {
+                Console.WriteLine("====================================");
+                Console.WriteLine("GUID: " + item.ClassInfoGUID);
+                Console.WriteLine("ID: " + item.ID);
+                Console.WriteLine("Class Name: " + item.Name);
+                Console.WriteLine("Created at: " + item.CreatedDateTimeOffset);
+                Console.WriteLine("Start Date: " + item.StartDateTimeOffset);
+                Console.WriteLine("End Date: " + item.EndDateTimeOffset);
+                Console.WriteLine("Description: " + item.Description);
+            }
+
+        }
+
+        public static ClassInfo GetClassInfoById(int id)
+        {
+            var st = StudentsClassInfo.ClassesInfo.SingleOrDefault(x => x.ID == id);
+            return st;
+        }
+        public static string AddClassInfo()
+        {
+            try
+            {
+                Console.WriteLine("please enter class detail \n");
+                Console.WriteLine("please enter Class Name: ");
+                string name = Console.ReadLine();
+                Console.WriteLine("please enter start date: ");
+                var startDate = DateTimeOffset.Parse(Console.ReadLine());
+                Console.WriteLine("please enter end date: ");
+                var endDate = DateTimeOffset.Parse(Console.ReadLine());
+                Console.WriteLine("please enter Description: ");
+                string desc = Console.ReadLine();
+
+                classInfo = new ClassInfo
+                {
+                    CreatedDateTimeOffset = DateTimeOffset.Now,
+                    Name = name,
+                    StartDateTimeOffset = startDate,
+                    EndDateTimeOffset = endDate,
+                    Description = desc
+                };
+                StudentsClassInfo.ClassesInfo.Add(classInfo);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return $"ID: {classInfo.ID}, Class Name: {classInfo.Name}, Start at: { classInfo.StartDateTimeOffset}";
+
+        }
+
+        public static void RemoveClassInfoByID(int id)
+        {
+            Console.WriteLine("enter class ID: ");
+            int clsID = int.Parse(Console.ReadLine());
+            if (StudentsClassInfo.ClassesInfo == null || StudentsClassInfo.ClassesInfo.Count == 0)
+            {
+                Console.WriteLine("Error! No class found!");
+                return;
+            }
+            ClassInfo remCls = StudentsClassInfo.ClassesInfo
+                .FirstOrDefault(x => x.ID == clsID);
+            if (StudentsClassInfo.ClassesInfo.Remove(remCls))
+                Console.WriteLine($"Class ID {remCls.ID}, Name {remCls.Name} removed Successfully");
+            else { Console.WriteLine("not found!"); }
+            return;
+        }
+
+        #endregion
 
 
     }
