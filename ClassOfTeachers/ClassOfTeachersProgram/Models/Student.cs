@@ -54,6 +54,12 @@ namespace ClassOfTeachersProgram.Models
             get { return _description; }
             set { _description = value; }
         }
+
+        public string LastName
+        {
+            get { return _lastName; }
+            set { _lastName = value; }
+        }
         #endregion
 
         #region Fields
