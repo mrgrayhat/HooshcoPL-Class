@@ -1,0 +1,6 @@
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.Entities\bin\Debug\ClassOfTeachers.Entities.dll
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.Entities\bin\Debug\ClassOfTeachers.Entities.pdb
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.Entities\obj\Debug\ClassOfTeachers.Entities.csprojAssemblyReference.cache
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.Entities\obj\Debug\ClassOfTeachers.Entities.csproj.CoreCompileInputs.cache
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.Entities\obj\Debug\ClassOfTeachers.Entities.dll
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.Entities\obj\Debug\ClassOfTeachers.Entities.pdb

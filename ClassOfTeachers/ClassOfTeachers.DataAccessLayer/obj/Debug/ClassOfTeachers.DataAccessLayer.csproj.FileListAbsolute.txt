@@ -1,0 +1,12 @@
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.DataAccessLayer\bin\Debug\ClassOfTeachers.DataAccessLayer.dll.config
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.DataAccessLayer\bin\Debug\ClassOfTeachers.DataAccessLayer.dll
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.DataAccessLayer\bin\Debug\ClassOfTeachers.DataAccessLayer.pdb
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.DataAccessLayer\bin\Debug\EntityFramework.dll
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.DataAccessLayer\bin\Debug\EntityFramework.xml
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.DataAccessLayer\obj\Debug\ClassOfTeachers.DataAccessLayer.csprojAssemblyReference.cache
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.DataAccessLayer\obj\Debug\ClassOfTeachers.DataAccessLayer.csproj.CoreCompileInputs.cache
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.DataAccessLayer\obj\Debug\ClassOfTeachers.DataAccessLayer.csproj.CopyComplete
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.DataAccessLayer\obj\Debug\ClassOfTeachers.DataAccessLayer.dll
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.DataAccessLayer\obj\Debug\ClassOfTeachers.DataAccessLayer.pdb

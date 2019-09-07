@@ -19,3 +19,6 @@ S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProg
 S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.csproj.CoreCompileInputs.cache
 S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.exe
 S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.pdb
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProgram\bin\Debug\ClassOfTeachers.Entities.dll
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProgram\bin\Debug\ClassOfTeachers.Entities.pdb
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachersProgram\obj\Debug\ClassOfTeachersProgram.csproj.CopyComplete

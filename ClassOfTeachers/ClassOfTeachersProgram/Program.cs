@@ -4,7 +4,8 @@
 //     Copyright (c) . All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
-using ClassOfTeachersProgram.Models;
+
+using ClassOfTeachers.Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

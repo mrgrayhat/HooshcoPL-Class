@@ -1,0 +1,5 @@
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.Services\bin\Debug\ClassOfTeachers.Services.dll
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.Services\bin\Debug\ClassOfTeachers.Services.pdb
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.Services\obj\Debug\ClassOfTeachers.Services.csproj.CoreCompileInputs.cache
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.Services\obj\Debug\ClassOfTeachers.Services.dll
+S:\Developer\Repos\HooshcoPL\HooshcoPL-Class\ClassOfTeachers\ClassOfTeachers.Services\obj\Debug\ClassOfTeachers.Services.pdb
